@@ -1,0 +1,4 @@
+com\application\service\UserService.class
+com\application\bean\User.class
+com\application\controller\UserController.class
+com\application\exception\UserNotFoundException.class

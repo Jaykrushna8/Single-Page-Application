@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>HomePage</title>
+<link type="text/css" rel="stylesheet" href="style.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="namesController.js"></script>
+<script src="sessionFactory.js"></script>
+<script src="homeController.js"></script>
+<style>
+body  {
+    background-image: url("https://s12.postimg.org/7eqhnb831/518151_backgrounds_W3q_VPu2.jpg");
+}
+
+h1{
+	color: red;
+}
+</style>
+<body ng-app="myApp" ng-controller="validateCtrl" >
+<header ng-include="'homepagehead.html'"></header>
+<div id="content" class="container"><h1>Welcome to my Website {{ users.firstname }}</h1></div>
+
+</body>
+</html>

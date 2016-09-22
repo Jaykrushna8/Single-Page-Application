@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Profile</title>
+<style>
+h1{
+	color: red;
+}
+</style>
+</head>
+<body ng-app="myApp" ng-controller="homeCtrl">
+<div id="profilebox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">User Profile</div>
+                        </div>  
+                        <div class="panel-body" >
+                            <form id="profileform" class="form-horizontal" role="form" ng-submit="updateAccount()">
+                                
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>  
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="email" ng-model="user.emailid" placeholder="Email Address">
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="firstname" class="col-md-3 control-label">First Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="firstname" ng-model="user.firstname" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname" class="col-md-3 control-label">Last Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="lastname" ng-model="user.lastname" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="passwd" ng-model="user.password" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactno" class="col-md-3 control-label">Contact Number</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="contactno" ng-model="user.contactno" placeholder="Contact Number">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="food" class="col-md-3 control-label">Favorite Food</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="food" ng-model="user.favfood" placeholder="Favorite Food">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <!-- Button -->                                        
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="submit" class="btn btn-primary" onclick="$('#profilebox').hide(); $('#successbox').show()"><i class="icon-hand-right"></i> Update</button>
+                                    
+                                    </div>
+                                </div>
+                            </form>
+                         </div>
+                    </div>
+
+         </div> 
+<div id="successbox" style="display:none; margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                    	<div class="panel-title">User Profile</div>
+                    	   <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#">Home</a></div>
+                        </div>  
+                    	
+                    
+                    <div class="panel-body">
+                    	<div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                    	<p align="center">Your Information Successfully Updated.</p>
+                    </div>	
+           </div>
+    </div>
+</body>
+</html>
